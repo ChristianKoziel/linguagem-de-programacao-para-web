@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <title>Calculadora</title>
+        <title>Aula Seletores HTML</title>
         <meta charset="UTF-8">
         <script src="script.js"></script>
     </header>
     <body>
-        <h1>Calculadora Simples</h1>
+        <h1 id="meuTitulo">Titulo Original</h1>
+        <h2 class="subtitulo">Subtitulo</h2>
+        <button onclick="puxarElementoPorId()">Modificar texto</button>
+        <p>Paragrafo de teste</p>
+        <button onclick="puxarElementoPorClasse()">Função classe</button>
+        <button onclick="puxarElementoPorTag()">Função tag</button>
 
-        <label for="valor1">Valor 1:</label>
-        <input type="number" id="valor1" name="valor1"><br><br>
+        <p>_____________________________</p>
 
-        <label for="valor2">Valor 2:</label>
-        <input type="number" id="valor2" name="valor2"><br><br>
-
-        <button onclick="somar()">Somar</button>
-        <button onclick="subtrair()">Subtrair</button>
-        <button onclick="multiplicar()">Multiplicar</button>
-        <button onclick="dividir()">Dividir</button>
-
-        <p id="resultado"></p>
+        <div id="lista-container">
+        </div>
+        <button onclick="criarLista()">Criar Lista</button>
+        <button onclick="removerLista()">Limpar Lista</button>
     </body>
 </html>

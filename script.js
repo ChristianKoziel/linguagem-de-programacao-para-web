@@ -1,34 +1,36 @@
-function obterValores() {
-    var valor1 = parseFloat(document.getElementById("valor1").value);
-    var valor2 = parseFloat(document.getElementById("valor2").value);
-    return { valor1, valor2 };
+// Seletor de elemento por id
+function puxarElementoPorId() {
+    const titulo = document.getElementById('meuTitulo');
+    titulo.textContent = "Titulo Alterado";
+    //console.log(titulo);
 }
 
-function somar() {
-    var { valor1, valor2 } = obterValores();
-    var resultado = valor1 + valor2;
-    document.getElementById("resultado").textContent = "Resultado: " + resultado;
+// Seletor de elemento por Classe
+function puxarElementoPorClasse() {
+    const subtitulo = document.getElementsByClassName('subtitulo');
+    console.log(subtitulo);
 }
 
-function subtrair() {
-    var { valor1, valor2 } = obterValores();
-    var resultado = valor1 - valor2;
-    document.getElementById("resultado").textContent = "Resultado: " + resultado;
+// Seletor puxar elemento por tag
+function puxarElementoPorTag() {
+    const paragrafos = document.getElementsByTagName('p');
+    console.log(paragrafos);
 }
 
-function multiplicar() {
-    var { valor1, valor2 } = obterValores();
-    var resultado = valor1 * valor2;
-    document.getElementById("resultado").textContent = "Resultado: " + resultado;
+// Função para criar a lista
+function criarLista() {
+    const container = document.getElementById('lista-container');
+    container.innerHTML =
+    `
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    `;
 }
 
-function dividir() {
-    var { valor1, valor2 } = obterValores();
-    var resultado;
-    if (valor2 !== 0) {
-        resultado = valor1 / valor2;
-    } else {
-        resultado = "Não é possível dividir por zero!";
-    }
-    document.getElementById("resultado").textContent = "Resultado: " + resultado;
+function removerLista() {
+    const container = document.getElementById('lista-container');
+    container.innerHTML = ``;
 }
