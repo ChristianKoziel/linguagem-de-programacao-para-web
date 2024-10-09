@@ -1,33 +1,190 @@
+/* Estilos Gerais */
 body {
-    font-family: Arial, san-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
+
 .header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    background-color: #f0f0f0;
+    padding: 20px; /* Reduzido para um alinhamento melhor */
     text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
-main {
-    flex: 1;
-    padding: 80px 20px 40px;
+
+.navbar {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px; /* Ajustado para alinhar melhor com o conteúdo */
 }
-.movie-grid {
+
+.nav-button {
+    margin: 10px;
+    margin-left: 70px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5b6e82;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.search-container {
+    margin-right: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1023px){
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-button {
+        margin: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        font-size: 16px;
+    }
+}
+.search-container input[type="search"] {
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.search-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.header h1, .header h2, .header p {
+    margin: 10px 0; /* Margem unificada */
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        justify-content: space-around;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column; /* Coloca os elementos um em cima do outro */
+    }
+
+    .header .search-container {
+        margin-left: auto; /* Alinha a caixa de pesquisa à direita */
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        background-image: url('img/biblioteca3.jpg');
+        color: white;
+        padding: 5px 20px; /* Ajuste do padding */
+        background-size: auto; /* Faz a imagem manter suas dimensões originais */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: repeat; /* Permite a repetição da imagem */
+    }
+    
+}
+
+@media (max-width: 1023px) {
+    .header {
+        background-image: url('img/biblioteca2.jpg');
+        color: white;
+        padding: 5px 20px; /* Ajuste do padding */
+    }
+}
+
+.book-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Estilos para os livros */
+.book {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: calc(30% - 40px); /* Para 3 colunas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Hover para o efeito */
+.book:hover {
+    transform: scale(1.05);
+}
+
+/* Botão de Download */
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) { /* Tablets */
+    .book {
+        width: calc(45% - 40px); /* Para 2 colunas */
+    }
+}
+
+@media (max-width: 768px) { /* Celulares */
+    .book {
+        width: 100%; /* Para 1 coluna */
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #5b6e82;
+    color: white;
+}
+
+.instagram {
+    max-width: 40px;
 }
