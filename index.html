@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <title>Aula Seletores HTML</title>
+    <head>
         <meta charset="UTF-8">
-        <script src="script.js"></script>
-    </header>
+        <title>Formulário</title>
+    </head>
     <body>
-        <h1 id="meuTitulo">Titulo Original</h1>
-        <h2 class="subtitulo">Subtitulo</h2>
-        <button onclick="puxarElementoPorId()">Modificar texto</button>
-        <p>Paragrafo de teste</p>
-        <button onclick="puxarElementoPorClasse()">Função classe</button>
-        <button onclick="puxarElementoPorTag()">Função tag</button>
+        <h1>Formulário de E-mail</h1>
+        <form id="emailForm">
+            <label for="to">Para: </label>
+            <input type="email" id="to" required>
 
-        <p>_____________________________</p>
+            <label for="subject">Assunto: </label>
+            <input type="text" id="subject" name="subject" required>
 
-        <div id="lista-container">
-        </div>
-        <button onclick="criarLista()">Criar Lista</button>
-        <button onclick="removerLista()">Limpar Lista</button>
+            <label for="body">Message: </label>
+            <textarea id="body" name="body" required></textarea>
+
+            <button type="submit">Enviar E-mail</button>
+        </form>
+        
+        <script src="script.js"></script>
     </body>
 </html>
